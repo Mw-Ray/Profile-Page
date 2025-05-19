@@ -1,6 +1,9 @@
 *{
     padding: 0%;
     margin: 0%;
+    border: 0%;
+    border-style: none;
+
 }
 body{
     border-style: outset;
@@ -86,6 +89,18 @@ p{
     font-weight: normal;
     border-style: solid;
 }
+.Contact input[type="button"]:hover{
+    background-color: lightgray;
+}
+.Contact span{
+    border-style: solid;
+    font-size : medium;
+    padding: 5px;
+    display: inline-block;
+    background-color: darkgray;
+    border-radius : 7px;
+}
+
 .Portfolio{
      border-style: outset;
     border-width: 2px;
