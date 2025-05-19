@@ -92,16 +92,5 @@ document.getElementById("submit").addEventListener("click", function() {
     }
 });
 
-document.getElementById("email").addEventListener("input" , (event) => {
 
-    let email = document.getElementById("email");
-    // Check if the email is valid
-    if (email.validity.typeMismatch) {
-        email.setCustomValidity("Please enter a valid email address");
-    } else if (email.validity.valueMissing) {
-        email.setCustomValidity("Please enter your email address");
-    } else {
-        email.setCustomValidity("");
-    }
-});
 
