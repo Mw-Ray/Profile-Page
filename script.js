@@ -30,36 +30,52 @@ let c = document.getElementById("c")
 let d = document.getElementById("d")
 let e = document.getElementById("e")
 
-a.addEventListener("mousemove", function() {
+a.addEventListener("mouseover", function() {
     a.style.color = "red";
     a.style.backgroundColor = "black";
     a.style.fontWeight = "bold";
+
+});
+a.addEventListener("mouseout", function() {
+    a.style.backgroundColor = "lightgray";
 });
 
-b.addEventListener("mousemove", function() {
+b.addEventListener("mouseover", function() {
     b.style.color = "blue";
     b.style.backgroundColor = "black";
     b.style.fontWeight = "bold";
 });
+b.addEventListener("mouseout", function() {
+    b.style.backgroundColor = "lightgray";
+});
 
-c.addEventListener("mousemove", function() {
+
+c.addEventListener("mouseover", function() {
     c.style.color = "green";
     c.style.backgroundColor = "black";
     c.style.fontWeight = "lighter";
 });
+c.addEventListener("mouseout", function() {
+    c.style.backgroundColor = "lightgray";
+});
 
-d.addEventListener("mousemove", function() {
-    d.style.color = "yellow";
+d.addEventListener("mouseover", function() {
+    d.style.color = "Indigo";
     d.style.backgroundColor = "black";
     d.style.fontWeight = "900";
 });
-
-e.addEventListener("mousemove", function() { 
+d.addEventListener("mouseout", function() {
+    d.style.backgroundColor = "lightgray";
+}); 
+e.addEventListener("mouseover", function() { 
     e.style.color = "purple";
     e.style.backgroundColor = "black";
     e.style.fontWeight = "normal";
 });
-
+e.addEventListener("mouseout", function() {
+    e.style.backgroundColor = "lightgray";
+});
+ 
 document.getElementById("submit").addEventListener("click", function() {
     let name = document.getElementById("name");
     let email = document.getElementById("email");
@@ -76,4 +92,16 @@ document.getElementById("submit").addEventListener("click", function() {
     }
 });
 
+document.getElementById("email").addEventListener("input" , (event) => {
+
+    let email = document.getElementById("email");
+    // Check if the email is valid
+    if (email.validity.typeMismatch) {
+        email.setCustomValidity("Please enter a valid email address");
+    } else if (email.validity.valueMissing) {
+        email.setCustomValidity("Please enter your email address");
+    } else {
+        email.setCustomValidity("");
+    }
+});
 
