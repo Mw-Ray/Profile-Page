@@ -80,12 +80,15 @@ document.getElementById("submit").addEventListener("click", function() {
     let name = document.getElementById("name");
     let email = document.getElementById("email");
 
-    console.log("Name: " + name.value);
-    console.log("Email: " + email.value);
+   
+
+   //console.log("Name: " + name.value);
+    //console.log("Email: " + email.value);
 
     // Check if either field is empty
     if(name.value == "" || email.value == "") {
         alert("Please fill in all fields");
+        alert("Submitting form...");
     } else {
         // If validation passes, you can submit the form
         alert("Form submitted successfully!");
