@@ -8,6 +8,7 @@
 body{
     border-style: outset;
     margin: 35px;
+    width: 95%;
     padding: 20px;
     border-width: 2px;
     background-color: white;
@@ -50,10 +51,7 @@ h2, p, .container li{
     font-family: 'Times New Roman', Times, serif;
     margin-left: 25px;
 }
-.Contact, .container, .Portfolio{
-    margin-left:20px;
-    margin-right: 250px;
-}    
+  
 .Contact{
     border-style: outset;
     border-width: 2px; 
